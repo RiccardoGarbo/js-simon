@@ -1,11 +1,24 @@
-#numbers {
+#numbers,
+#timer,
+#button {
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 5rem;
 
+
 }
 
-.hidden {
+#numbers.hidden,
+#timer.hidden,
+#button.hidden {
     display: none;
+}
+
+
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
 }
