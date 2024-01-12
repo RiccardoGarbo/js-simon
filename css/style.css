@@ -1,6 +1,7 @@
 #numbers,
 #timer,
-#button {
+#button,
+#result {
     display: flex;
     justify-content: center;
     align-items: center;
