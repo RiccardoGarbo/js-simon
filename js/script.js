@@ -12,9 +12,9 @@ button.addEventListener('click', () => {
     result.innerText = ' '
     let numbers = []
 
-    //Genero 5 numeri casuali da 1 a 100
+    //Genero 5 numeri diversi casuali da 1 a 100
     while (numbers.length < 5) {
-        let number = parseInt(Math.floor(Math.random() * 6) + 1)
+        let number = parseInt(Math.floor(Math.random() * 100) + 1)
         if (!numbers.includes(number))
             numbers.push(number)
         console.log(numbers)
@@ -37,22 +37,26 @@ button.addEventListener('click', () => {
             numbersPage.classList.add('hidden')
             button.classList.remove('hidden')
             timerPage.classList.add('hidden')
-            //Chiado all'utente tanti numeri quanti i numeri randomici 
-            let numberUser = []
 
-
+            //Creo una variabile per i numeri corretti dell'utente
+            let correctNumberUser = []
+            //Chiedo per 5 volte i numeri all'utente
             for (let i = 0; i < numbers.length; i++) {
-
-                numberUser.push(parseInt(prompt('Inserisci i numeri visti in precedenza')))
-                if (numberUser[i] === numbers[i]) {
+                let userNumber = (parseInt(prompt('Inserisci i numeri visti in precedenza')))
+                //Se tra i numeri random usciti in pagina è presente il numero inserito nell utente, allora lo aggiungo alla variabile dei numeri corretti
+                if (numbers.includes(userNumber)) {
+                    correctNumberUser.push(userNumber)
                     //Creo il messaggio finale con numeri indovinati e punteggio
-                    result.innerText = `Hai indovinato questi numeri:${numberUser} per un totale di ${numberUser.length} punti! `
+                    result.innerText = `Hai indovinato questi numeri:${correctNumberUser} per un totale di ${correctNumberUser.length} punti! `
                 }
-                console.log(numberUser)
+                else if (correctNumberUser.length < 1) {
+                    result.innerText = 'Non hai indovinato nessun numero! 0 Punti!'
+                }
+                console.log(userNumber)
                 console.log(numbers)
+                console.log(correctNumberUser)
 
 
-                //Se il numero dell'utente è uguale al numero randomico generato in pagina allora lo inserisco nel risultato.
             }
             button.innerText = 'Riprova'
         }
