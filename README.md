@@ -21,3 +21,7 @@ Esecuzione:
 3-Al click del bottone visualizzo in pagina 5 numeri generati casualmente e appare un timer di 30 secondi.
 4-Un volta che il timer si azzera devo far sparire i numeri e devo chiedere all'utente tramite prompt() i numeri usciti precedentemente
 5-In base alle risposte date tramite prompt() dall'utente il programma deve dire quali e quanti numeri sono stati individuati
+
+
+
+

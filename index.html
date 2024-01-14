@@ -12,14 +12,49 @@
     <script defer src="js/script.js"></script>
 </head>
 
-<body>
-    <!--elementi in pagina-->
-    <div>
-        <button id="button">AVVIA</button>
+<body class="container">
+    <!--Elementi in pagina-->
+
+    <!--Bottone dello start-->
+    <div class="button-start">
+        <button id="button">AVVIA IL GIOCO </button>
     </div>
+
+    <!--numeri casuali della CPU-->
     <div id="numbers"></div>
+
+    <!--Timer-->
     <div id="timer"></div>
+
+    <!--Messaggio del risultato-->
     <h2 id="result"></h2>
+
+    <!--Messaggio per l'utente-->
+    <div>
+        <p id="message-page"></p>
+    </div>
+
+    <!--Input da compilare per il gioco-->
+    <div id="user-number" class="hidden">
+        <input id="number1" value="" type="number">
+        <input id="number2" value="" type="number">
+        <input id="number3" value="" type="number">
+        <input id="number4" value="" type="number">
+        <input id="number5" value="" type="number">
+    </div>
+
+    <!--Bottone per inviare i numeri inseriti -->
+    <div class="btn-number hidden">
+        <button id="button-number">Cliccami per inserire i tuoi numeri!
+    </div>
+
+    <!--Messaggi dei numeri CPU/Utente-->
+    <div id="message-numbers">
+        <p id="message-random-number"></p>
+        <p id="message-user-number"></p>
+    </div>
+
+
 
 </body>
 

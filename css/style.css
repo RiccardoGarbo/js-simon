@@ -1,25 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 920px;
+    margin: 0 auto;
+}
+
 #numbers,
 #timer,
-#button,
-#result {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 5rem;
+#result,
+#message-page {
+    text-align: center;
+    font-size: 3rem;
+}
 
+.button-start,
+#message-page {
+    text-align: center;
+}
+
+#button {
+    font-size: 3rem;
 
 }
 
-#numbers.hidden,
-#timer.hidden,
-#button.hidden {
+.hidden {
     display: none;
 }
 
+h2,
+#numbers,
+#timer,
+div #message-page,
+#message-numbers,
+.btn-number,
+#user-number {
+    text-align: center;
+}
 
-div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 5rem;
+#message-numbers {
+    font-size: 2.5rem;
+}
+
+#message-user-number {
+    color: blue;
+}
+
+#message-random-number {
+    color: red;
+}
+
+input {
+    width: 100px;
+    height: 50px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+
+#button-number {
+    font-size: 2rem;
+    padding: 20px;
 }
