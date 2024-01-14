@@ -73,7 +73,7 @@ buttonStartGame.addEventListener('click', () => {
     numbersPage.innerText = numbers.join(' - ')
 
     //Faccio partire il timer da 30
-    let timer = 30
+    let timer = 5
 
     //Stampo il timer in pagina
     timerPage.innerText = `TIMER: ${timer}`
@@ -136,21 +136,26 @@ buttonStartGame.addEventListener('click', () => {
 
                     //Creo una variabile array per inserire i numeri che l'utente indovina
                     let correctNumberUser = []
+                    console.log(correctNumberUser)
+                    console.log(userNumber)
 
-                    //Se tra i numeri della CPU è presente un numero scelto dall'utente allora lo inserisce nella lista dei numeri corretti
-                    if (numbers.includes(userNumber[i])) {
-                        correctNumberUser.push(userNumber[i])
+                    //Verifica dei numeri
+                    for (let i = 0; i < numbers.length; i++) {
+                        //Se tra i numeri random usciti in pagina è presente il numero inserito nell utente, allora lo aggiungo alla variabile dei numeri corretti
+                        if (numbers.includes(userNumber[i])) {
+                            correctNumberUser.push(userNumber[i])
 
-                        //Creo il messaggio finale con numeri indovinati , punteggio, numeri CPU e numeri utente
-                        result.innerText = `Hai indovinato questo/i numeri:${correctNumberUser} per un totale di ${correctNumberUser.length} punto/i! `
-                        messageRandomaNumber.innerText = `I numeri usciti alla CPU sono: ${numbers}`
-                        messageUserNumber.innerText = `I numeri inseriti da te sono: ${userNumber}`
-                    }
-                    //Se non è presente alcun numero corretto
-                    else if (correctNumberUser.length < 1) {
-                        result.innerText = 'Non hai indovinato nessun numero! 0 Punti!'
-                        messageRandomaNumber.innerText = `I numeri usciti alla CPU sono: ${numbers}`
-                        messageUserNumber.innerText = `I numeri inseriti da te sono: ${userNumber}`
+                            //Creo il messaggio finale con numeri indovinati , punteggio, numeri CPU e numeri utente
+                            result.innerText = `Hai indovinato questo/i numeri:${correctNumberUser} per un totale di ${correctNumberUser.length} punto/i! `
+                            messageRandomaNumber.innerText = `I numeri usciti alla CPU sono: ${numbers}`
+                            messageUserNumber.innerText = `I numeri inseriti da te sono: ${userNumber}`
+                        }
+                        //Se non inserisce alcun numero corretto
+                        else if (correctNumberUser.length < 1) {
+                            result.innerText = 'Non hai indovinato nessun numero! 0 Punti!'
+                            messageRandomaNumber.innerText = `I numeri usciti alla CPU sono: ${numbers}`
+                            messageUserNumber.innerText = `I numeri inseriti da te sono: ${userNumber}`
+                        }
                     }
 
                 }
