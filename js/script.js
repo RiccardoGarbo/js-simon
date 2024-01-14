@@ -73,7 +73,7 @@ buttonStartGame.addEventListener('click', () => {
     numbersPage.innerText = numbers.join(' - ')
 
     //Faccio partire il timer da 30
-    let timer = 5
+    let timer = 30
 
     //Stampo il timer in pagina
     timerPage.innerText = `TIMER: ${timer}`
